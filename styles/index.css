@@ -164,7 +164,20 @@ nav {
     height: 100vh;
     overflow: hidden;
 }
+.hero-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    line-height: 0;
+    z-index: 5;
+}
 
+.hero-wave svg {
+    display: block;
+    width: 100%;
+    height: 120px;
+}
 
 .hero-slider {
     position: absolute;
@@ -181,7 +194,7 @@ nav {
     height: 100%;
     background-size: cover;
     background-position: center;
-    opacity: 0;
+    opacity: 1;
     transition: opacity 1s ease-in-out;
 }
 
@@ -387,7 +400,7 @@ nav {
 }
 
 .carousel-track::-webkit-scrollbar {
-    display: none; /* Esconde scrollbar no Chrome/Safari */
+    display: none; 
 }
 
 .carousel-item {
@@ -444,7 +457,7 @@ nav {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 30px;
-    margin-bottom: 40px; /* Dá um espaço entre o projeto 1 e o projeto 2 */
+    margin-bottom: 40px; 
     align-items: stretch;
 }
 
@@ -639,7 +652,7 @@ nav {
     border-radius: 10px;
 }
 /* ==========================================================================
-   SEÇÃO INVESTIDOR COM IMAGEM DE BACKGROUND
+   SEÇÃO INVESTIDOR
    ========================================================================== */
 
 .investidor {
@@ -653,7 +666,7 @@ nav {
     background-repeat: no-repeat;
 }
 
-/* garante que o conteúdo fique acima do background */
+
 .investidor-grid {
     position: relative;
     z-index: 2;
@@ -672,8 +685,8 @@ nav {
 
 /* cards */
 .investidor-card {
-    min-height: 320px;
-    padding: 2rem;
+    min-height: auto;
+    padding: 1.5rem;
     border-radius: 20px;
 
     background: rgba(255, 255, 255, 0.90);
@@ -689,15 +702,71 @@ nav {
     box-shadow: 0 20px 40px rgba(0,0,0,0.06);
 }
 /* ==========================================================================
+   CARDS EXPANSÍVEIS
+   ========================================================================== */
+
+.collapsible-card {
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+/* topo do card */
+.card-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+/* texto ocupa espaço */
+.card-text {
+    flex: 1;
+}
+
+/* ícone de expandir */
+.expand-icon {
+    font-size: 1.2rem;
+    color: #00A651;
+    transition: 0.3s ease;
+}
+
+/* conteúdo escondido */
+.card-extra {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition:
+        max-height 0.4s ease,
+        opacity 0.3s ease,
+        margin-top 0.3s ease;
+}
+
+/* quando expandido */
+.collapsible-card.active .card-extra {
+    max-height: 300px;
+    opacity: 1;
+    margin-top: 1.5rem;
+}
+
+/* gira o ícone */
+.collapsible-card.active .expand-icon {
+    transform: rotate(45deg);
+}
+
+/* hover elegante */
+.collapsible-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 166, 81, 0.25);
+}
+/* ==========================================================================
    IMAGEM DE CABEÇALHO DO MODAL
    ========================================================================== */
 
 .modal-hero {
-    /* Compensa o padding de 40px do modal para a imagem encostar nas bordas de cima e dos lados */
+    
     margin: -40px -40px 20px -40px; 
     height: 250px;
     position: relative;
-    border-radius: 20px 20px 0 0; /* Mantém as pontas arredondadas do seu modal */
+    border-radius: 20px 20px 0 0; 
     overflow: hidden;
 }
 
@@ -714,15 +783,14 @@ nav {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 120px; /* Altura da transição (o quanto ela "derrete") */
+    height: 120px; 
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
 }
 
-/* Ajuste fino no botão de fechar (X) para ele ficar visível e elegante por cima da imagem */
 .modal-content .close {
-    z-index: 10; /* Garante que fique acima da imagem */
+    z-index: 10; 
     color: var(--white);
-    background: rgba(0, 0, 0, 0.3); /* Fundo escurinho translúcido */
+    background: rgba(0, 0, 0, 0.3); 
     width: 35px;
     height: 35px;
     display: flex;
