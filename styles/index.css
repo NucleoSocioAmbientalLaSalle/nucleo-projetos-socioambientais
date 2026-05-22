@@ -121,6 +121,17 @@ header {
     z-index: 1000;
 }
 
+header.scrolled {
+    padding: 1rem 8%;
+
+    background: rgba(255, 255, 255, 0.18);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -128,8 +139,13 @@ nav {
 }
 
 
-.logo img{
-    width: 200px;
+.logo img {
+    width: 180px;
+    transition: 0.4s ease;
+}
+
+header.scrolled .logo img {
+    width: 140px;
 }
 
 .logo span {
