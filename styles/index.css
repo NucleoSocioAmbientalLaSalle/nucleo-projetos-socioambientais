@@ -608,7 +608,7 @@ nav {
 
 /* quando expandido */
 .collapsible-card.active .card-extra {
-    max-height: 300px;
+    max-height: 400px;
     opacity: 1;
     margin-top: 1.5rem;
 }
