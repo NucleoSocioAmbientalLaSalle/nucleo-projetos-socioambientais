@@ -13,24 +13,55 @@
 <body>
     <header>
         <nav>
-            <a href="#home" class="logo"><img src="./assets/logo_MA.png" alt="Logo Meio Ambiente"></a>
+            <a href="#" id= home class="logo"><img src="./assets/logo_MA.png" alt="Logo Meio Ambiente"></a>
             <ul class="nav-links">
-                <li><a href="#home">Início</a></li>
                 <li><a href="#missao">Missão</a></li>
                 <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#investidor">Apoie</a></li>
+                <li><a href="#investidor">Parceria</a></li>
                 <li><a href="#contact">Contato</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="home" class="hero">
-            <div class="slide"
-                style="background-image: url('./assets/background-hero.png');">
+        <section class="gallery-section">
+
+    <div class="gallery-carousel">
+
+        <button class="gallery-arrow prev">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <div class="gallery-track">
+
+            <div class="gallery-slide active">
+                <img src="assets/foto1.jpeg" alt="Supressão de espécies invasoras">
             </div>
-    
-        </section>
+
+            <div class="gallery-slide">
+                <img src="assets/foto2.jpeg" alt="Recuperação de área degradada">
+            </div>
+
+            <div class="gallery-slide">
+                <img src="assets/foto3.jpeg" alt="Equipamentos utilizados">
+            </div>
+
+            <div class="gallery-slide">
+                <img src="assets/foto4.jpeg" alt="Plantio de mudas">
+            </div>
+
+            <div class="gallery-slide">
+                <img src="assets/foto5.jpeg" alt="Área em restauração">
+            </div>
+
+        </div>
+
+        <button class="gallery-arrow next">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+
+    </div>
+</section>
 
         <section id="missao" class="mission">
             <div class="container">
@@ -43,23 +74,6 @@
                         </p>
                     </div>
 
-                    <div class="mission-stats">
-                        <div class="stat-card">
-                            <div class="stat-icon"><i class="fas fa-database"></i></div>
-                            <div class="stat-info">
-                                <h3>+300</h3>
-                                <p>Espécies Registradas</p>
-                            </div>
-                        </div>
-
-                        <div class="stat-card">
-                            <div class="stat-icon"><i class="fas fa-hand-holding-heart"></i></div>
-                            <div class="stat-info">
-                                <h3>Saúde</h3>
-                                <p>Resiliência e Bem-estar</p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -79,6 +93,10 @@
                         <div class="carousel-item" data-filter="itapua" style="background-image: url('./assets/parque-estadual-de-itapua.jpg');">
                             <div class="carousel-overlay"></div>
                             <span>PROJETO NOSSO ITAPUÃ</span>
+                        </div>
+                        <div class="carousel-item" data-filter="projetoCRIEC" style="background-image: url('./assets/criec.jpg');">
+                            <div class="carousel-overlay"></div>
+                            <span>PROJETO CRIEC CANOAS - SbN</span>
                         </div>
                     </div>
 
@@ -126,19 +144,49 @@
                                 <div class="info-card">
                                     <i class="fas fa-paw"></i>
                                     <div class="info-text">
-                                        <h4>Foco</h4>
-                                        <p>Fauna Local</p>
+                                        <h4>Localização</h4>
+                                        <p>Rio Grande do Sul</p>
                                     </div>
                                 </div>
                                 <div class="info-card">
                                     <i class="fas fa-shield-alt"></i>
                                         <div class="info-text">
-                                            <h4>Parceria</h4>
-                                            <p>SEMA-RS</p>
+                                            <h4>Área de Impacto</h4>
+                                            <p>+100 hectares</p>
                                         </div>
                                 </div>
                                         
                         </div>  
+                </div>
+                    <div class="project-showcase-layout project-item" data-category="projetoCRIEC" style="display: none;">
+                        <div class="project-card main-project-card" data-modal-target="modalCRIEC">
+                            <div class="project-image">
+                                <img src="assets/criec.jpg" alt="Floresta">
+                            </div>
+                            <div class="project-content">
+                                <h3>PROJETO CRIEC CANOAS - SbN</h3>
+                                <p>Busca promover a adaptação climática e o fortalecimento da resiliência urbana por meio da recuperação ambiental.</p>
+                            </div>
+                        </div>
+                        <div class="side-info-column">
+
+    <div class="info-card">
+        <i class="fas fa-seedling"></i>
+        <div class="info-text">
+            <h4>Solução Aplicada</h4>
+            <p>Soluções Baseadas na Natureza (SbN)</p>
+        </div>
+    </div>
+
+    <div class="info-card">
+        <i class="fas fa-water"></i>
+        <div class="info-text">
+            <h4>Objetivo</h4>
+            <p>Mitigação de Alagamentos</p>
+        </div>
+    </div>
+
+</div>
                 </div>
             </div>   
         </section>
@@ -158,26 +206,6 @@
                         O RestaurAPA tem sido considerado um marco dentro da instituição, pois o seu desenvolvimento possibilitou uma série de aprendizados, além de iniciar uma estratégia mais sólida de captação de projetos dentro do “guarda-chuva” socioambiental.
                     </p>
                     <br>
-                    <div class="info-block">
-                        <h4>Contexto científico</h4>
-                        <p>Os campos do bioma Pampa apresentam alta diversidade de gramíneas e plantas herbáceas, mas sofrem degradação causada por mudanças no uso da terra e pela invasão de espécies exóticas. Uma das invasoras mais problemáticas é o capim-annoni, identificado cientificamente como <i>Eragrostis plana</i>. Essa gramínea africana reduz a qualidade das pastagens, diminui a biodiversidade e altera a dinâmica ecológica dos campos nativos.</p>
-                    </div>
-                    <br>
-                    <div class="info-block">
-                        <h4>Coordenação científica do projeto</h4>
-                        <p>Pesquisadores da universidade lideraram o planejamento metodológico, a articulação institucional e o monitoramento das atividades de restauração.</p>
-                    </div>
-                    <br>
-                    <div class="info-block">
-                        <h4>Pesquisa Ecológica</h4>
-                        <p>Equipes acadêmicas conduziram levantamentos florísticos que registraram <strong>mais de 300 espécies vegetais</strong> nos campos da APA do Ibirapuitã, demonstrando a alta biodiversidade do bioma Pampa.</p>
-                    </div>
-                    <br>
-                    <div class="info-block">
-                        <h4>Impacto científico e socioambiental</h4>
-                        <p>O projeto mostrou que a restauração de campos nativos pode ocorrer simultaneamente à produção pecuária. Essa abordagem reforçou um conceito da ecologia aplicada: certos sistemas produtivos podem funcionar como aliados da conservação, desde que o manejo respeite os processos ecológicos do ecossistema.</p>
-                    </div>
-                    
 
                     <div class="modal-info-grid">
                         <div class="info-block">
@@ -244,9 +272,173 @@
                         </div>
                     </div>
                 </div>
+                <div class="info-block">
+
+    <div class="project-links">
+        <div class="info-block full-width">
+        <h4>Localização e Informações Oficiais</h4>
+
+        <a href="https://www.gov.br/icmbio/pt-br/assuntos/biodiversidade/unidade-de-conservacao/unidades-de-biomas/pampa/lista-de-ucs/apa-do-ibirapuita?utm_source=chatgpt.com"
+        target="_blank"
+        class="official-link">
+
+            <i class="fas fa-globe-americas"></i>
+            Site Oficial da Unidade
+
+        </a>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d880554.0241964173!2d-56.32485864410315!3d-30.44562108863088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a9fef8dcb43895%3A0xcdaa0f37690ea328!2zw4FyZWEgZGUgUHJvdGXDp8OjbyBBbWJpZW50YWwgZG8gSWJpcmFwdWl0w6M!5e0!3m2!1spt-BR!2sbr!4v1780317013717!5m2!1spt-BR!2sbr"
+            width="100%"
+            height="300"
+            style="border:0; border-radius:16px;"
+            loading="lazy">
+        </iframe>
+    </div>
+
+    </div>
+</div>
             </div>
         </div>
 
+        <div id="modalItapua" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="modal-hero">
+                    <img src="./assets/parque-estadual-de-itapua.jpg" alt="Capa do Projeto">
+                </div>
+                <h2><i class="fas fa-tree"></i> PROJETO NOSSO ITAPUÃ: BIOMAS PAMPA E MATA ATLÂNTICA</h2>
+                <div class="modal-body">
+                    <p>
+                        Nosso Itapuã: Restauração Ecológica no Parque Estadual de Itapuã - controle de espécies vegetais exóticas invasoras e manejo da vegetação nativa.
+                        O projeto tem por objetivo realizar o controle da espécie exótica invasora Pinus elliottii Engelm. e a recuperação ecológica de ecossistemas naturais em 110 ha do Parque Estadual de Itapuã (PEI), 
+                        localizado em Viamão, na Região Metropolitana de Porto Alegre (RMPA).
+                        O projeto Nosso Itapuã foi elaborado e está sendo executado pela Universidade La Salle, 
+                        sendo viabilizado por meio da política pública de Reposição Florestal Obrigatória (RFO) da Secretaria Estadual do Meio Ambiente e Infraestrutura (SEMA/RS), com recursos financeiros no valor de R$2.514.518,08 da empresa CPFL RGE.
+                    </p>
+                    <br>
+
+                    <div class="modal-info-grid">
+                        
+                        <div class="info-block">
+                            <h4>Instituições Envolvidas</h4>
+                            <ul>
+                                <li>Universidade La Salle</li>
+                                <li>Universidade Federal do Rio Grande do Sul</li>
+                                <li>SEMA/RS e FEPAM</li>
+                                <li>Parque Estadual de Itapuã</li>
+                            </ul>
+                        </div>
+                        <div class="info-block">
+                            <h4>Área de Atuação (5.500 ha)</h4>
+                            <ul>
+                                <li>Remanescentes de Mata Atlântica</li>
+                                <li>Campos naturais e dunas</li>
+                                <li>Formações rochosas graníticas</li>
+                                <li>Praias lacustres da Lagoa dos Patos</li>
+                            </ul>
+                        </div>
+                        <div class="info-block">
+                            <h4>Resultados Principais</h4>
+                            <ul>
+                                <li>Ampliação do conhecimento sobre a biodiversidade local</li>
+                                <li>Formação prática de novos pesquisadores e estudantes</li>
+                                <li>Produção de dados científicos para a gestão do parque</li>
+                                <li>Desenvolvimento de materiais de divulgação científica</li>
+                            </ul>
+                        </div>
+                        <div class="info-block">
+                            <h4>Impacto Científico e Socioambiental</h4>
+                            <ul>
+                                <li>Fortalecimento das UCs como laboratórios naturais</li>
+                                <li>Apoio direto à gestão ambiental pública</li>
+                                <li>Sensibilização da sociedade para a conservação</li>
+                            </ul>
+                        </div>
+                        <div class="info-block">
+                            <h4>Objetivos específicos</h4>
+                            <ul>
+                                <li>Realizar diagnóstico e mapeamento das populações de P. elliottii no território do PEI;</li>
+                                <li>Elaborar plano de controle e erradicação de fundadores das populações de P. elliottii na área do centro de visitantes e Morro do Araçá;</li>
+                                <li>Realizar controle dos processos iniciais de invasão e novos recrutamentos de P. elliottii na área do centro de visitantes e Morro do Araçá;</li>
+                                <li>Realizar monitoramento da regeneração natural e manejo adaptativo da vegetação impactada por P. elliottii  nos locais onde o controle da espécie exótica foi implementado;</li>
+                               <li>Construir viveiro para cultivo de mudas de espécies nativas para uso na restauração ecológica das áreas manejadas;</li>
+                               <li>Realizar atividades de Educação Ambiental nas escolas do entorno do PEI e propriedades lindeiras;</li>
+                               <li>Realizar atividades de comunicação do projeto.</li>
+                        </div>
+                        <div class="info-block">
+                            <h4>Contribuição do Projeto:</h4>
+                            <ul>
+                                <li>Pesquisas sobre restauração de campos naturais</li>
+                                <li>Estudos sobre dinâmica de invasões biológicas</li>
+                                <li>Estratégias de manejo sustentável em sistemas pastorais</li>
+                            </ul>
+                        </div>
+                        <div class="info-block">
+                            <h4>Resultados parciais</h4>
+                            <ul>
+                                <li>Diagnóstico inicial e mapeamento aéreo com DRONE/VANT das áreas degradadas do PEI;</li>
+                                <li>Levantamento florístico das áreas manejadas, com 19 espécies arbóreas e 107 espécies herbáceas;</li>
+                                <li>Controle de 13.000 indivíduos de P. elliottii em 110 ha manejados;</li>
+                                <li>Monitoramento das áreas manejadas, com o arranquio de 1.600 indivíduos jovens e plântulas de P. elliottii até abril de 2026;</li>
+                                <li>Construção de um viveiro de 70 m² para cultivo de mudas de espécies nativas;</li>
+                                <li>Plantio de 500 mudas de espécies arbóreas nativas;</li>
+                            </ul>
+                        </div>
+                        <div class="info-block full-width">
+                            <h4>Metodologia Científica</h4>
+                            <div class="methodology-flex">
+                                <div>
+                                    <h5>Inventários</h5>
+                                    <ul>
+                                        <li>Levantamento de fauna e flora</li>
+                                        <li>Identificação de espécies</li>
+                                        <li>Bases de dados biológicos</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h5>Monitoramento</h5>
+                                    <ul>
+                                        <li>Acompanhamento de populações</li>
+                                        <li>Observação de interações</li>
+                                        <li>Análise de mudanças na biodiversidade</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h5>Educação Ambiental</h5>
+                                    <ul>
+                                        <li>Visitas guiadas e extensão</li>
+                                        <li>Produção de material educativo</li>
+                                        <li>Divulgação científica</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="project-links">
+        <div class="info-block full-width">
+        <h4>Localização e Informações Oficiais</h4>
+
+        <a href="https://www.sema.rs.gov.br/parque-estadual-de-itapua?utm_source=chatgpt.com"
+        target="_blank"
+        class="official-link">
+
+            <i class="fas fa-globe-americas"></i>
+            Site Oficial da Unidade
+
+        </a>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3443.1855000072806!2d-51.028227425210666!3d-30.345677574773266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9519be31e2e6ae23%3A0x233785b8421ec015!2sParque%20Estadual%20de%20Itapu%C3%A3!5e0!3m2!1spt-BR!2sbr!4v1780317761768!5m2!1spt-BR!2sbr"
+            width="100%"
+            height="300"
+            style="border:0; border-radius:16px;"
+            loading="lazy">
+        </iframe>
+    </div>
+            </div>
+        </div>
+    </div>
         <div id="modalItapua" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
@@ -385,6 +577,145 @@
                 </div>
             </div>
         </div>
+        <div id="modalCRIEC" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+
+        <div class="modal-hero">
+            <img src="./assets/criec.jpg" alt="Projeto CRIEC Canoas">
+        </div>
+
+        <h2><i class="fas fa-water"></i> Projeto CRIEC Canoas - Soluções Baseadas na Natureza (SbN)</h2>
+
+        <div class="modal-body">
+
+            <p>
+                O Projeto CRIEC Canoas - Soluções Baseadas na Natureza (SbN) busca promover a adaptação climática e o fortalecimento da resiliência urbana por meio da recuperação ambiental de áreas estratégicas do município de Canoas-RS. A iniciativa integra conhecimento científico, inovação e gestão ambiental para desenvolver soluções sustentáveis capazes de reduzir os impactos causados por eventos climáticos extremos, especialmente inundações urbanas.
+            </p>
+
+            <br>
+
+            <div class="info-block">
+                <h4>Contexto Científico</h4>
+
+                <p>
+                    As cidades sustentáveis, também conhecidas como cidades verdes ou eco-cidades, representam territórios onde inovação, desenvolvimento econômico, conservação ambiental e bem-estar social atuam de forma integrada. Canoas apresenta elevada vulnerabilidade climática, especialmente em relação a eventos extremos de inundação.
+                </p>
+
+                <p>
+                    Em 2024, o município foi diretamente impactado pela maior tragédia climática já registrada no Brasil. As enchentes que atingiram a Região Metropolitana de Porto Alegre evidenciaram a necessidade de estratégias inovadoras para adaptação climática e redução de riscos.
+                </p>
+
+                <p>
+                    Nesse contexto, destacam-se as Soluções Baseadas na Natureza (SbN), definidas como ações que utilizam processos ecológicos e ecossistemas naturais para enfrentar desafios ambientais, sociais e econômicos, promovendo benefícios simultâneos para as pessoas e para o meio ambiente.
+                </p>
+            </div>
+
+            <br>
+
+            <div class="info-block">
+                <h4>Objetivo do Projeto</h4>
+
+                <p>
+                    Revitalizar uma bacia de detenção de água localizada no bairro Guajuviras, incorporando uma Solução Baseada na Natureza por meio de intervenções de engenharia e restauração ecológica. O projeto prevê ações de dragagem, remoção de resíduos, recuperação de taludes, recomposição da vegetação nativa e controle de espécies exóticas invasoras.
+                </p>
+            </div>
+
+            <br>
+
+            <div class="info-block">
+                <h4>Impacto Científico e Socioambiental</h4>
+
+                <p>
+                    A iniciativa busca restabelecer serviços ecossistêmicos, reduzir a ocorrência de alagamentos em áreas vulneráveis e fortalecer a justiça climática no território. O projeto também promove a integração entre ciência, tecnologia e gestão pública, contribuindo para o desenvolvimento de modelos inovadores de adaptação climática urbana.
+                </p>
+            </div>
+
+            <div class="modal-info-grid">
+
+                <div class="info-block">
+                    <h4>Instituições Envolvidas</h4>
+                    <ul>
+                        <li>Universidade La Salle Canoas</li>
+                        <li>Universidade Federal do Rio Grande do Sul (UFRGS)</li>
+                        <li>Universidade de Caxias do Sul (UCS)</li>
+                        <li>ICLEI</li>
+                        <li>Cruz Vermelha Brasileira</li>
+                    </ul>
+                </div>
+
+                <div class="info-block">
+                    <h4>Financiamento</h4>
+                    <ul>
+                        <li>Fundação de Amparo à Pesquisa do Estado do Rio Grande do Sul (FAPERGS)</li>
+                        <li>Edital 05/2025</li>
+                    </ul>
+                </div>
+
+                <div class="info-block">
+                    <h4>Resultados Esperados</h4>
+                    <ul>
+                        <li>Redução dos impactos causados por alagamentos urbanos</li>
+                        <li>Recuperação ambiental da bacia de detenção</li>
+                        <li>Restauração da vegetação nativa em áreas de preservação permanente</li>
+                        <li>Melhoria da qualidade ambiental do sistema hídrico local</li>
+                        <li>Fortalecimento da resiliência climática urbana</li>
+                    </ul>
+                </div>
+
+                <div class="info-block">
+                    <h4>Benefícios Gerados</h4>
+                    <ul>
+                        <li>Mitigação de riscos climáticos</li>
+                        <li>Recuperação de serviços ecossistêmicos</li>
+                        <li>Valorização da biodiversidade local</li>
+                        <li>Integração entre pesquisa e gestão pública</li>
+                        <li>Promoção da justiça climática</li>
+                    </ul>
+                </div>
+
+                <div class="info-block full-width">
+                    <h4>Metodologia</h4>
+
+                    <div class="methodology-flex">
+
+                        <div>
+                            <h5>Diagnóstico Ambiental</h5>
+                            <ul>
+                                <li>Mapeamento da área</li>
+                                <li>Avaliação da vulnerabilidade climática</li>
+                                <li>Caracterização dos impactos ambientais</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h5>Intervenções de Engenharia</h5>
+                            <ul>
+                                <li>Dragagem da bacia</li>
+                                <li>Remoção de resíduos</li>
+                                <li>Recuperação dos taludes</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h5>Restauração Ecológica</h5>
+                            <ul>
+                                <li>Plantio de espécies nativas</li>
+                                <li>Controle de espécies invasoras</li>
+                                <li>Monitoramento ambiental contínuo</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
     </div>
         <div class="section-divider"></div>
 
@@ -486,37 +817,6 @@
                 </div>
 
             </div>
-            <!-- CARD 4 -->
-            <div class="investidor-card collapsible-card">
-
-                <div class="card-top">
-                    <div class="icon-box">
-                        <i class="fas fa-microscope"></i>
-                    </div>
-
-                    <div class="card-text">
-                        <h3>Acesso à Pesquisas</h3>
-
-                        <p>
-                            Aproximamos instituições de projetos acadêmicos e científicos
-                            voltados à inovação ambiental.
-                        </p>
-                    </div>
-
-                    <div class="expand-icon">
-                        <i class="fas fa-arrow-down"></i>
-                    </div>
-                </div>
-
-                <div class="card-extra">
-                    <p>
-                        As parcerias possibilitam acesso a pesquisas aplicadas,
-                        desenvolvimento conjunto e oportunidades de inovação sustentável.
-                    </p>
-                </div>
-
-            </div>
-
         </div>
     </div>
 </section>
@@ -544,7 +844,6 @@
 
             <div class="partners-logos">
                 <img src="assets/logo-lasalle.png" alt="La Salle">
-                <img src="assets/logo-fapergs.png" alt="Fapergs">
             </div>
         </div>
 
@@ -555,7 +854,9 @@
             <p>© 2026 Ecossistema de Inovação</p>
         </div>
     </footer>
-
+    <button id="backToTop" class="back-to-top">
+    <i class="fas fa-chevron-up"></i>
+</button>
     <script src="./scripts/index.js"></script>
 </body>
 

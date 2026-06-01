@@ -1,21 +1,20 @@
-
 function setActiveNavLink() {
-    const sections = document.querySelectorAll('section');
+    const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-links a');
 
-    let current = '';
+    let currentSection = '';
 
     sections.forEach((section) => {
         const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
 
         if (window.pageYOffset >= sectionTop - 150) {
-            current = section.getAttribute('id');
+            currentSection = section.getAttribute('id');
         }
     });
 
     navLinks.forEach((link) => {
-        link.classList.toggle('active', link.getAttribute('href').includes(current));
+        const target = link.getAttribute('href');
+        link.classList.toggle('active', target.includes(currentSection));
     });
 }
 
@@ -91,41 +90,117 @@ function initProjectFilter() {
     });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+function initCollapsibleCards() {
+    const collapsibleCards = document.querySelectorAll('.collapsible-card');
+
+    collapsibleCards.forEach((card) => {
+        card.addEventListener('click', () => {
+            card.classList.toggle('active');
+        });
+    });
+}
+
+function initHeaderScroll() {
+    const header = document.querySelector('header');
+
+    if (!header) {
+        return;
+    }
+
+    window.addEventListener('scroll', () => {
+        header.classList.toggle('scrolled', window.scrollY > 50);
+    });
+}
+
+let currentGallery = 0;
+
+function showGallerySlide(index) {
+    const gallerySlides = document.querySelectorAll('.gallery-slide');
+
+    if (!gallerySlides.length) {
+        return;
+    }
+
+    gallerySlides.forEach((slide) => slide.classList.remove('active'));
+    gallerySlides[index].classList.add('active');
+}
+
+function nextGallery() {
+    const gallerySlides = document.querySelectorAll('.gallery-slide');
+
+    if (!gallerySlides.length) {
+        return;
+    }
+
+    currentGallery = (currentGallery + 1) % gallerySlides.length;
+    showGallerySlide(currentGallery);
+}
+
+function prevGallery() {
+    const gallerySlides = document.querySelectorAll('.gallery-slide');
+
+    if (!gallerySlides.length) {
+        return;
+    }
+
+    currentGallery = (currentGallery - 1 + gallerySlides.length) % gallerySlides.length;
+    showGallerySlide(currentGallery);
+}
+
+function initGalleryCarousel() {
+    const prevBtn = document.querySelector('.gallery-arrow.prev');
+    const nextBtn = document.querySelector('.gallery-arrow.next');
+    const gallerySlides = document.querySelectorAll('.gallery-slide');
+
+    if (!prevBtn || !nextBtn || gallerySlides.length === 0) {
+        return;
+    }
+
+    prevBtn.addEventListener('click', prevGallery);
+    nextBtn.addEventListener('click', nextGallery);
+}
+
+function initGalleryAutoRotate() {
+    const gallerySlides = document.querySelectorAll('.gallery-slide');
+
+    if (!gallerySlides.length) {
+        return;
+    }
+
+    setInterval(nextGallery, 5000);
+}
+
+function initPage() {
     initProjectFilter();
     initModalHandlers();
+    initCollapsibleCards();
+    initHeaderScroll();
+    initGalleryCarousel();
+    initGalleryAutoRotate();
 
     window.addEventListener('scroll', setActiveNavLink);
-});
+    setActiveNavLink();
+}
 
-const heroButton = document.querySelector(".hero-btn");
+document.addEventListener('DOMContentLoaded', initPage);
 
-const projectData = [
-    
-    {
-        title: "Projetos Futuros",
-        description: "Faça parte desse futuro.",
-        buttonText: "Seja um apoiador",
-        buttonLink: "#investidor"
-    }
-];
-
-const collapsibleCards = document.querySelectorAll(".collapsible-card");
-
-collapsibleCards.forEach(card => {
-    card.addEventListener("click", () => {
-        card.classList.toggle("active");
-    });
-});
-
-const header = document.querySelector("header");
+const backToTop = document.getElementById("backToTop");
 
 window.addEventListener("scroll", () => {
 
-    if (window.scrollY > 50) {
-        header.classList.add("scrolled");
+    if (window.scrollY > 400) {
+        backToTop.classList.add("show");
     } else {
-        header.classList.remove("scrolled");
+        backToTop.classList.remove("show");
     }
+
+});
+
+backToTop.addEventListener("click", () => {
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 
 });
