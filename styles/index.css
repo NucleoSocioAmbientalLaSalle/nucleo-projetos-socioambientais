@@ -2,10 +2,11 @@
    1. VARIÁVEIS E RESET
    ========================================================================== */
 :root {
-    --primary-green: #2d6a4f;
+    --primary-green: #367c43;
     --accent-green: #74c69d;
     --dynamic-green: #4ade80;
     --earth-brown: #403d39;
+    --primary-blue: #043878;
 
     --bg-color: #f8fafc;
     --white: #ffffff;
@@ -30,7 +31,7 @@ html {
 
 body {
     color: var(--text-main);
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Sora', sans-serif;
     line-height: 1.6;
     background: var(--bg-color);
 }
@@ -70,14 +71,14 @@ a {
 }
 
 .btn-primary {
-    background: #003B84;
+    background: var(--primary-blue);
     color: var(--white);
     box-shadow: 0 8px 20px rgba(0, 59, 132, 0.15);
 }
 
 .btn-primary:hover {
     transform: translateY(-3px);
-    background: #002c63;
+    background: var(--primary-blue);
 }
 
 .btn-secondary {
@@ -89,7 +90,7 @@ a {
 
 .btn-secondary:hover {
     background: var(--white);
-    color: #003B84;
+    color: var(--primary-blue);
     transform: translateY(-3px);
 }
 
@@ -123,7 +124,7 @@ nav {
 }
 
 .logo img {
-    width: 180px;
+    width: 300px;
     transition: 0.4s ease;
 }
 
@@ -140,7 +141,7 @@ header.scrolled .logo img {
 .nav-links a {
     font-size: 20px;
     text-decoration: none;
-    color: #003B84;
+    color: var(--primary-blue);
     font-weight: 700;
     transition: var(--transition);
 }
@@ -159,7 +160,7 @@ header.scrolled .logo img {
 }
 
 .gallery-section h2 {
-    color: #003B84;
+    color: var(--primary-blue);
     margin-bottom: 3rem;
 }
 
@@ -238,7 +239,7 @@ header.scrolled .logo img {
 
 .mission-text h2 {
     font-size: 2.8rem;
-    color: #003B84;
+    color: var(--primary-blue);
     margin-bottom: 20px;
     font-family: 'Montserrat', sans-serif;
 }
@@ -413,7 +414,7 @@ header.scrolled .logo img {
 
 .info-card i {
     font-size: 1.8rem;
-    color: #003B84;
+    color: var(--primary-blue);
     background: rgba(45, 106, 79, 0.1);
     padding: 15px;
     border-radius: 12px;
@@ -554,7 +555,7 @@ header.scrolled .logo img {
     gap: 0.6rem;
     padding: 10px 18px;
     margin-bottom: 1rem;
-    background: #003B84;
+    background: var(--primary-blue);
     color: var(--white);
     border-radius: 12px;
     text-decoration: none;
@@ -562,7 +563,7 @@ header.scrolled .logo img {
 }
 
 .official-link:hover {
-    background: #0057c2;
+    background: var(--primary-blue);
     transform: translateY(-2px);
 }
 
@@ -599,7 +600,7 @@ header.scrolled .logo img {
     text-align: center;
     margin-bottom: 3rem;
     font-size: 2.5rem;
-    color: #003B84;
+    color: var(--primary-blue);
     font-weight: 700;
     position: relative;
     z-index: 2;
@@ -674,7 +675,7 @@ header.scrolled .logo img {
 .contact {
     padding: 80px 8%;
     text-align: center;
-    color: #003B84;
+    color: var(--primary-blue);
     font-weight: 700;
 }
 
@@ -749,7 +750,7 @@ header.scrolled .logo img {
 }
 
 footer {
-    background-color: #003B84;
+    background-color: var(--primary-blue);
     color: var(--white);
     text-align: center;
 }
