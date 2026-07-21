@@ -141,18 +141,18 @@ header.scrolled .logo img {
 .nav-links a {
     font-size: 20px;
     text-decoration: none;
-    color: var(--primary-blue);
+    color: #f1b13d;
     font-weight: 700;
     transition: var(--transition);
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-    color: #00A651;
+    color: var(--primary-green);
 }
 
 .section-header{
-    color:#00A651
+    color:#f1b13d
 }
 /* ==========================================================================
    4. GALERIA
@@ -257,6 +257,37 @@ header.scrolled .logo img {
 /* ==========================================================================
    6. PROJETOS
    ========================================================================== */
+
+
+
+.projects{
+    position: relative;
+    overflow: hidden;
+    background-color: var(--primary-blue);
+}
+
+.bg-onca{
+    position: absolute;
+
+    right: -150px;
+    bottom: 0;
+
+    width: 1300px;
+    height: auto;
+
+    opacity: .18;
+
+    pointer-events: none;
+    user-select: none;
+
+    z-index: 0;
+}
+
+.projects > *:not(.bg-onca){
+    position: relative;
+    z-index: 1;
+}
+
 .nav-carousel-wrapper {
     position: relative;
     display: flex;
@@ -700,11 +731,13 @@ header.scrolled .logo img {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: var(--white);
+    color: white;
     text-decoration: none;
     font-size: 1.1rem;
 }
-
+.social-links a:hover{
+    color:var(--primary-green);
+}
 /* ==========================================================================
    9.1. BOTÃO VOLTAR AO TOPO
    ========================================================================== */
@@ -764,10 +797,13 @@ footer {
 
 .footer-top h2 {
     margin-bottom: 10px;
+    color: #f1b13d;
 }
 
 .footer-top p {
     opacity: 0.9;
+    color: var(--primary-green);
+    font-weight: 600; 
 }
 
 .footer-divider {
